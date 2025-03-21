@@ -2,7 +2,7 @@
 
 Here I have setup for myself which supports langs and tools I daily use.
 
-### 1- Install Vim Plug
+### 1- install Vim Plug
 
     https://github.com/junegunn/vim-plug
 
