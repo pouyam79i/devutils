@@ -1,17 +1,14 @@
-# config your shell
+# Config your shell
 
-    sudo apt install zsh
-    chsh -s $(which zsh)
-
-### check zsh docs
+### 1- zsh installation guide (Oh my zsh)
 
     https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 
-### 1- use om my zsh
+### 2- use om my zsh
 
     https://ohmyz.sh/#install
 
-### 2- rename config.zshrc to .zshrc and move it to $HOME directory
+### 3- rename config.zshrc to .zshrc and move it to $HOME directory
 
 ## note
 

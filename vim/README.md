@@ -1,4 +1,4 @@
-# config your vim
+# Config your vim
 
 Here I have setup for myself which supports langs and tools I daily use.
 
