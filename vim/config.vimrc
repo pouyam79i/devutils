@@ -117,7 +117,6 @@ highlight CocPumMenu guibg=#3B4252 guifg=#E5E9F0
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Enable spell checking
-set spell
 set spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
 
