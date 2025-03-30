@@ -2,6 +2,11 @@
 
 Here I have setup for myself which supports langs and tools I daily use.
 
+
+### 0- set vim as default
+
+    sudo update-alternatives --config editor
+
 ### 1- install Vim Plug
 
     https://github.com/junegunn/vim-plug
