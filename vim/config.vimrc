@@ -2,7 +2,19 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'joshdick/onedark.vim'
-" Plugins for Go development
+
+" Plugins for Infrastructure Mana
+Plug 'ekalinin/Dockerfile.vim'                     " Dockerfile syntax
+Plug 'bkad/vim-terraform'                          " Terraform syntax
+Plug 'pearofducks/ansible-vim'                     " Used for ansible syntax
+
+" Plugins for Shell Scripting
+Plug 'vim-syntastic/syntastic'                     " Syntax checking
+Plug 'shime/vim-livedown'                          " Markdown preview (optional)
+Plug 'chr4/nginx.vim'                              " Nginx config syntax (optional)
+Plug 'WolfgangMehner/bash-support'                 " Bash IDE support
+
+" Plugins for Go development - might be required
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Go support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}    " Autocompletion
 Plug 'preservim/nerdtree'                          " File explorer
@@ -12,22 +24,13 @@ Plug 'dense-analysis/ale'                          " Linting
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder
 Plug 'junegunn/fzf.vim'                            " Fuzzy finder integration
 
-" Plugins for Dockerfile development
-Plug 'ekalinin/Dockerfile.vim'                     " Dockerfile syntax
-
-" Plugins for JavaScript, Node.js, Vue, CSS, and HTML
+" Plugins for JavaScript, Node.js, Vue, CSS, and HTML - might be useful some where :)
 Plug 'pangloss/vim-javascript'                     " JavaScript syntax
 Plug 'mxw/vim-jsx'                                 " JSX syntax
 Plug 'posva/vim-vue'                               " Vue.js syntax
 Plug 'hail2u/vim-css3-syntax'                      " CSS3 syntax
 Plug 'othree/html5.vim'                            " HTML5 syntax
 Plug 'mattn/emmet-vim'                             " Emmet for HTML/CSS
-
-" Plugins for Shell Scripting
-Plug 'vim-syntastic/syntastic'                     " Syntax checking
-Plug 'shime/vim-livedown'                          " Markdown preview (optional)
-Plug 'chr4/nginx.vim'                              " Nginx config syntax (optional)
-Plug 'WolfgangMehner/bash-support'                 " Bash IDE support
 
 call plug#end()
 
@@ -129,3 +132,10 @@ highlight SpellLocal cterm=underline ctermfg=cyan guifg=cyan
 " Toggle spell check with F6
 nnoremap <F6> :set spell!<CR>
 inoremap <F6> <C-o>:set spell!<CR>
+
+" Used for ansible
+augroup ansible_vim_fthosts
+  autocmd!
+  autocmd BufNewFile,BufRead hosts setfiletype yaml.ansible
+augroup END
+
