@@ -71,12 +71,14 @@ ZSH_THEME="fino"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(terraform)
+plugins=(golang)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export EDITOR='vim'
-export VISUAL='code --wait'
+export VISUAL='vim'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
